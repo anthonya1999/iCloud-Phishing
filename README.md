@@ -23,3 +23,6 @@ This sign-in prompt is included within a private framework that is on everyone�
 * Apple can easily fix this problem by simply not including this login screen within a framework any developer has access to! It really should not be there to begin with.
 * Even if this specific problem does get fixed, alerts could still be used in malicious ways. There needs to be less ambiguity between system alerts and alerts that are generated from developers’ applications; they are virtually indistinguishable from each other.
 * **Side note:** if Apple is for some reason reading this, don’t remove dlopen()! The functions in this write-up can be used for good, and they should be used that way. Just please, remove your internal view controllers from your frameworks, or require entitlements to show them.
+
+[Follow me on Twitter](https://twitter.com/AAgatiello) for updates about this and more things related to iOS security.  
+[Follow Felix Krause on Twitter](https://twitter.com/KrauseFX) as well; and thanks for the help in writing this post!
