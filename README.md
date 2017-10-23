@@ -7,6 +7,8 @@ I did more research on other possible attack vectors that were available for exp
 ## What do the screenshots mean?
 In the first screenshot, the user is prompted for their iTunes password, like Felix Krause demonstrated in his [blog post](https://krausefx.com/blog/ios-privacy-stealpassword-easily-get-the-users-apple-id-password-just-by-asking). However, if the user were to click “Cancel” to this prompt in the demo I created, it opens the Settings application, and presents a screen that asks you to enter your credentials for iCloud. This is the **system login screen of iCloud, which is part of the Settings application**. The scary part, is that a developer can run their own code after tapping the “Sign-In” button (as shown in the final screenshot), potentially sending the user’s credentials to someone else.
 
+**Video Demonstration:** https://www.youtube.com/watch?v=zmafn5FVr4M
+
 ## Disclaimer
 This is just a proof of concept, phishing attacks are illegal! Don’t use this in any of your apps. The goal of this blog post is to close the loophole that has been here for many years, and hasn’t been addressed yet. For moral reasons, I have decided not to include the actual source code.
 
