@@ -7,13 +7,14 @@ I did more research on other possible attack vectors that were available for exp
 ## What do the screenshots mean?
 In the first screenshot, the user is prompted for their iTunes password, like Felix Krause demonstrated in his [blog post](https://krausefx.com/blog/ios-privacy-stealpassword-easily-get-the-users-apple-id-password-just-by-asking). However, if the user were to click “Cancel” to this prompt in the demo I created, it opens the Settings application, and presents a screen that asks you to enter your credentials for iCloud. This is the **system login screen of iCloud, which is part of the Settings application**. The scary part, is that a developer can run their own code after tapping the “Sign-In” button (as shown in the final screenshot), potentially sending the user’s credentials to someone else.
 
-**Video Demonstration:** https://www.youtube.com/watch?v=zmafn5FVr4M
+**Video Demonstration:** https://www.youtube.com/watch?v=zmafn5FVr4M  
+**Tweet:** https://twitter.com/AAgatiello/status/922819975743713285
 
 ## Disclaimer
 This is just a proof of concept, phishing attacks are illegal! Don’t use this in any of your apps. The goal of this blog post is to close the loophole that has been here for many years, and hasn’t been addressed yet. For moral reasons, I have decided not to include the actual source code.
 
 ## How does it work?
-This sign-in prompt is included within a private framework that is on everyone’s iOS device, and can be easily loaded with *dlopen()* and *objc_getClass()*. For reasons that should be obvious, I’m not going to specify the framework name or the class, but this can easily be fixed by Apple; see section below.
+This sign-in prompt is included within a private framework that is on everyone’s iOS device, and can be easily loaded with *dlopen()* and *objc_getClass()*, avoiding detection of Private APIs by Apple. For reasons that should be obvious, I’m not going to specify the framework name or the class, but this can easily be fixed by Apple; see section below.
 
 ## How can you protect yourself?
 * As always, the best way to protect yourself from phishing is to **enable two-factor authentication**! Even if others have your credentials, they won’t be of much use if you have a second layer of protection.
