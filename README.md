@@ -17,6 +17,7 @@ This is just a proof of concept, phishing attacks are illegal! Don’t use this 
 This sign-in prompt is included within a private framework that is on everyone’s iOS device, and can be easily loaded with *dlopen()* and *objc_getClass()*, avoiding detection of Private APIs by Apple. For reasons that should be obvious, I’m not going to specify the framework name or the class, but this can easily be fixed by Apple; see section below.
 
 ## How can you protect yourself?
+* Duplicate the radar! [rdar://35150461](https://openradar.appspot.com/radar?id=4965336176656384)
 * As always, the best way to protect yourself from phishing is to **enable two-factor authentication**! Even if others have your credentials, they won’t be of much use if you have a second layer of protection.
 * As for the alert: double click the home button to bring up multitasking and see which app is currently asking you for your password! Ensure it is not a third-party one.
 * You should only be entering your Apple ID information inside of the built-in Settings application, or inside of a pop-up that is not shown within other apps.
